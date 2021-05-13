@@ -9,12 +9,12 @@ import { parseToGenerator } from '.';
 
 const main = async () => {
   const prog = program
-    .name('json-to-runtypes')
+    .name('protobuf-to-runtypes')
     .description(
-      'Convert JSON into Runtypes capable of parsing the same JSON shape.',
+      'Convert Protobuf into Runtypes.',
     )
-    .option('-i, --input <input file>', 'Path to JSON. Can also be stdin.')
-    .option('-o, --output <output file>', 'Output file. stdout if omitted,')
+    .option('-i, --input <input file>', 'Path to Protobuf. Can also be stdin.')
+    .option('-o, --output <output file>', 'Output file. stdout if omitted.')
     .parse(process.argv);
 
   const { input, output } = prog.opts();

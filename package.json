@@ -9,7 +9,7 @@
     "protobuf-to-runtypes": "dist/cli.js"
   },
   "files": [
-    "build"
+    "dist"
   ],
   "scripts": {
     "lint": "eslint . --ext .ts,.tsx",
