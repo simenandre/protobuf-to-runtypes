@@ -49,6 +49,8 @@ jobs:
       - if: ${{ steps.release.outputs.release_created }}
         run: yarn run build
 
+      - uses: codecov/codecov-action@v1
+
       - if: ${{ steps.release.outputs.release_created }}
         run: yarn publish
         env:
