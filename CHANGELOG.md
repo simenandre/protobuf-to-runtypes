@@ -1,5 +1,12 @@
 # Changelog
 
+### [1.0.1](https://www.github.com/cobraz/protobuf-to-runtypes/compare/v1.0.0...v1.0.1) (2021-05-13)
+
+
+### Bug Fixes
+
+* Packages issues ([a1bc215](https://www.github.com/cobraz/protobuf-to-runtypes/commit/a1bc215aedbaccca01f89c6ba45a84d09deab5b0))
+
 ## 1.0.0 (2021-05-13)
 
 
