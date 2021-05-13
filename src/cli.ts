@@ -3,6 +3,7 @@
 
 import * as fs from 'fs/promises';
 import { program } from 'commander';
+import { generateRuntypes } from 'generate-runtypes';
 import * as getStdin from 'get-stdin';
 import { parseToGenerator } from '.';
 
@@ -17,15 +18,10 @@ const main = async () => {
     .parse(process.argv);
 
   const { input, output } = prog.opts();
-  const jsonContent = input
-    ? await fs.readFile(input, 'utf-8')
-    : await getStdin();
+  const content = input ? await fs.readFile(input, 'utf-8') : await getStdin();
 
-  if (!jsonContent) {
-    throw new Error('Could not find any input.');
-  }
-
-  const out = await parseToGenerator(JSON.parse(jsonContent));
+  const toGenerator = await parseToGenerator(content);
+  const out = await generateRuntypes(toGenerator);
   if (output) {
     await fs.writeFile(output, out);
   } else {
