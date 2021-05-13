@@ -1,6 +1,6 @@
 {
   "name": "protobuf-to-runtypes",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Convert protobuf to runtypes",
   "repository": "git@github.com:cobraz/protoc-gen-runtypes",
   "license": "Apache-2.0",
