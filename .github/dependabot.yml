@@ -14,6 +14,7 @@ updates:
       interval: "daily"
     ignore:
       - dependency-name: "typescript*"
+      - dependency-name: "get-stdin"
       - dependency-name: "@types/node"
         versions: ["15.x"]
     labels:
